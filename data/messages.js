@@ -18,7 +18,8 @@ window.MESSAGES = [
   },
   {
     "name": "拓劭謙",
-    "text": "我永遠記得在我們剛被封鎖的時候，就收到來自外面的美味麥當勞！請看附圖"
+    "text": "我永遠記得在我們剛被封鎖的時候，就收到來自外面的美味麥當勞！請看附圖",
+    "photo": "images/messages/tuo-shaoqian.jpg"
   },
   {
     "name": "謝佳玲",
