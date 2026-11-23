@@ -339,12 +339,36 @@
     return b;
   }
 
-  function showMore() {
+  /* 留言卡片的欄位：新卡片只會接在最短那一欄的下面，已經出現的卡片不會移動 */
+  var cards = [], cols = [], colN = 0;
+  function wantCols() {
+    var w = window.innerWidth;
+    return w >= 960 ? 4 : (w >= 720 ? 2 : 1);
+  }
+  function placeCard(card) {
+    var best = cols[0];
+    for (var c = 1; c < cols.length; c++) {
+      if (cols[c].offsetHeight < best.offsetHeight - 4) best = cols[c];
+    }
+    best.appendChild(card);
+  }
+  function buildCols() {
     var grid = $('msgGrid');
+    colN = wantCols();
+    grid.innerHTML = '';
+    cols = [];
+    for (var c = 0; c < colN; c++) { var col = el('div', 'msg-col'); grid.appendChild(col); cols.push(col); }
+    cards.forEach(placeCard);
+  }
+  window.addEventListener('resize', function () { if (wantCols() !== colN) buildCols(); });
+
+  function showMore() {
+    if (!cols.length) buildCols();
     var end = Math.min(shown + PAGE, MESSAGES.length);
     for (var i = shown; i < end; i++) {
       var card = msgCard(MESSAGES[i], i);
-      grid.appendChild(card);
+      cards.push(card);
+      placeCard(card);
       observe(card);
     }
     shown = end;
