@@ -22,7 +22,7 @@ window.CHAPTERS = [
       { file: "images/chaos/01.jpg", caption: "月亮在那邊！" },
       { file: "images/chaos/05.jpg", caption: "" },
       { file: "images/chaos/03.jpg", caption: "被封鎖的那天，外面送來了麥當勞" },
-      { file: "images/chaos/04.jpg", caption: "鼓手上線" },
+      { file: "images/chaos/04.jpg", caption: "鼓手上線", bubble: "bottom" },
       { file: "images/chaos/06.jpg", caption: "新朋友" },
       { file: "images/chaos/08.jpg", caption: "" },
       { file: "images/chaos/07.jpg", caption: "" }
@@ -51,7 +51,8 @@ window.CHAPTERS = [
       { file: "images/little-things/12.jpg", caption: "" },
       { file: "images/little-things/13.jpg", caption: "" },
       { file: "images/little-things/14.jpg", caption: "" },
-      { file: "images/little-things/15.jpg", caption: "桌遊之夜" }
+      { file: "images/little-things/15.jpg", caption: "桌遊之夜" },
+      { file: "images/little-things/16.jpg", caption: "" }
     ]
   },
   {
