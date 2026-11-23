@@ -58,7 +58,7 @@ window.CHAPTERS = [
     subtitle: "冒險回憶篇",
     layout: "postcard",
     photos: [
-      { file: "images/adventures/01.jpg", caption: "基隆", note: "下一站，就是這裡" },
+      { file: "images/adventures/01.jpg", caption: "基隆", note: "外木山見了" },
       { file: "images/adventures/02.jpg", caption: "", note: "" },
       { file: "images/adventures/03.jpg", caption: "", note: "" },
       { file: "images/adventures/04.jpg", caption: "夜市", note: "" },
