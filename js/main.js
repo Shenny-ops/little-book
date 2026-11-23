@@ -49,6 +49,7 @@
   function renderCover() {
     var count = MESSAGES.length;
     $('openingLine').textContent = SITE.openingLine || '';
+    $('openingLine').hidden = !SITE.openingLine;
     $('addressTo').textContent = 'To: ' + (SITE.names || '');
     $('addressTitle').textContent = SITE.title || '';
     $('stamp').textContent = SITE.initials || '';

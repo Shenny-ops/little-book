@@ -10,7 +10,7 @@ window.SITE = {
   initials: "D·R",
 
   // 封面
-  openingLine: "有一封信，等你們打開很久了。",
+  openingLine: "",   // 信封上方的一句話，留空就不顯示
   postmark: { city: "新竹", cityEn: "HSINCHU", date: "2027.11" },
 
   // 信紙滑出後的內容（{count} 會自動換成留言數量）
