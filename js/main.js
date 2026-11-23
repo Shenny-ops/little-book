@@ -178,6 +178,8 @@
         panel.appendChild(photo(p, '照片 ' + (n0 + i)));
         if (p.caption) panel.appendChild(el('span', 'comic__bubble', '「' + p.caption + '」'));
         if (i === 2) panel.appendChild(el('span', 'comic__pop', '!?'));
+        // 張數剛好差一張排滿時，最後一格拉寬，不留空格
+        if (i === ch.photos.length - 1 && ch.photos.length % 4 === 3) panel.classList.add('comic__panel--wide');
         grid.appendChild(panel);
       });
       return grid;
@@ -322,6 +324,7 @@
       b.appendChild(el('span', 'msg__len', '長信・約 ' + Math.round(len / 10) * 10 + ' 字'));
       b.appendChild(el('span', 'msg__more', '拆開這封 →'));
     }
+    if (m.photo) b.appendChild(el('span', 'msg__clip', '附照片'));
     b.addEventListener('click', function () { openModal(i); });
     return b;
   }
@@ -354,7 +357,16 @@
     $('mdTo').textContent = 'To ' + (SITE.names || '');
     $('mdName').textContent = 'From ' + m.name;
     $('mdText').textContent = m.text;
-    $('mdText').scrollTop = 0;
+    var fig = $('mdPhoto');
+    if (m.photo) {
+      $('mdPhotoImg').src = m.photo;
+      $('mdPhotoImg').alt = m.name + ' 附上的照片';
+      fig.hidden = false;
+    } else {
+      fig.hidden = true;
+      $('mdPhotoImg').removeAttribute('src');
+    }
+    $('mdTextWrap').scrollTop = 0;
   }
   function openModal(i) {
     current = i; lastFocus = document.activeElement;
