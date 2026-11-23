@@ -4,7 +4,7 @@
 // 每張照片：
 //   file：照片路徑（放在 images/ 對應的資料夾裡）
 //   caption：照片上的一句話（可留空 ""）
-//   bubble："bottom" 讓漫畫對話框放在照片下方（只有 The Chaos 會用到）
+//   bubble：漫畫對話框位置，可填 "bottom"（左下）、"bottom-right"（右下）、"top-right"（右上），不填就是左上（只有 The Chaos 會用到）
 //   note：小字註記，例如日期、地點（可留空）
 //   title / text：只有 slow（珍貴時刻篇）會用到，是這張照片的標題和回憶文字
 //
@@ -23,7 +23,7 @@ window.CHAPTERS = [
       { file: "images/chaos/05.jpg", caption: "" },
       { file: "images/chaos/03.jpg", caption: "被封鎖的那天，外面送來了麥當勞" },
       { file: "images/chaos/04.jpg", caption: "鼓手上線", bubble: "bottom" },
-      { file: "images/chaos/06.jpg", caption: "新朋友" },
+      { file: "images/chaos/06.jpg", caption: "新朋友", bubble: "bottom-right" },
       { file: "images/chaos/08.jpg", caption: "" },
       { file: "images/chaos/07.jpg", caption: "" }
     ]

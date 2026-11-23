@@ -524,3 +524,5 @@ body { position: relative; width: 100%; }
 .slow__photo .photo img { width: auto; max-width: 100%; height: auto; max-height: 620px; border: 2.5px solid var(--ink); }
 .slow__photo .photo:hover img { transform: none; }
 @media (max-width: 719px) { .slow__photo .photo img { max-height: 70vh; } }
+.comic__panel .comic__bubble--br { top: auto; bottom: 12px; left: auto; right: 12px; }
+.comic__panel .comic__bubble--tr { top: 12px; bottom: auto; left: auto; right: 12px; }
