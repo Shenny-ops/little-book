@@ -179,7 +179,8 @@
         if (p.caption) panel.appendChild(el('span', 'comic__bubble' + (p.bubble === 'bottom' ? ' comic__bubble--bottom' : ''), '「' + p.caption + '」'));
         if (i === 2) panel.appendChild(el('span', 'comic__pop', '!?'));
         // 張數剛好差一張排滿時，最後一格拉寬，不留空格
-        if (i === ch.photos.length - 1 && ch.photos.length % 4 === 3) panel.classList.add('comic__panel--wide');
+        var n = ch.photos.length;
+        if ((n % 4 === 3 && i === n - 1) || (n % 4 === 2 && i >= n - 2)) panel.classList.add('comic__panel--wide');
         grid.appendChild(panel);
       });
       return grid;

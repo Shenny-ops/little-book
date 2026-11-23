@@ -23,7 +23,6 @@ window.CHAPTERS = [
       { file: "images/chaos/05.jpg", caption: "" },
       { file: "images/chaos/03.jpg", caption: "被封鎖的那天，外面送來了麥當勞" },
       { file: "images/chaos/04.jpg", caption: "鼓手上線" },
-      { file: "images/chaos/02.jpg", caption: "起飛！", bubble: "bottom" },
       { file: "images/chaos/06.jpg", caption: "新朋友" },
       { file: "images/chaos/07.jpg", caption: "" }
     ]
@@ -66,7 +65,8 @@ window.CHAPTERS = [
       { file: "images/adventures/05.jpg", caption: "", note: "" },
       { file: "images/adventures/06.jpg", caption: "", note: "" },
       { file: "images/adventures/07.jpg", caption: "", note: "" },
-      { file: "images/adventures/08.jpg", caption: "", note: "" }
+      { file: "images/adventures/08.jpg", caption: "", note: "" },
+      { file: "images/adventures/09.jpg", caption: "起飛！", note: "" }
     ]
   },
   {
