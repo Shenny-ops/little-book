@@ -95,9 +95,24 @@
   }
   function initMusic() {
     var a = $('bgm');
+    var autoPaused = false;   // 是不是因為離開網站才暫停（使用者自己按暫停的就不自動恢復）
     $('musicBtn').addEventListener('click', function () {
+      autoPaused = false;
       if (a.paused) { startMusic(); } else { a.pause(); setMusicBtn(false); }
     });
+    // 離開網站、切到其他分頁或視窗時暫停；回來時接著播
+    function leave() {
+      if (!a.paused) { a.pause(); autoPaused = true; setMusicBtn(false); }
+    }
+    function back() {
+      if (autoPaused && document.visibilityState === 'visible') { autoPaused = false; startMusic(); }
+    }
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState === 'hidden') leave(); else back();
+    });
+    window.addEventListener('pagehide', leave);
+    window.addEventListener('blur', leave);
+    window.addEventListener('focus', back);
   }
 
   function initCover() {
