@@ -514,3 +514,6 @@ body { position: relative; width: 100%; }
 .msg__clip { position: absolute; right: 10px; top: -10px; padding: 2px 8px; background: var(--yellow); border: 2px solid var(--ink); font-size: 12px; font-weight: 700; transform: rotate(4deg); }
 .comic__panel--wide { grid-column: span 2; }
 .comic__panel .comic__bubble--bottom { top: auto; bottom: 12px; }
+.modal__photos { display: flex; flex-wrap: wrap; gap: 18px 22px; align-items: flex-start; }
+.modal__photos:empty { display: none; }
+.modal__photos .modal__photo:nth-child(even) { transform: rotate(2deg); }

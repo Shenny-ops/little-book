@@ -1,5 +1,6 @@
 // 留言資料：每一則是 { name: 署名, text: 留言內容 }
 // 想在信裡附一張照片：加上 "photo": "images/messages/檔名.jpg"
+// 附好幾張：加上 "photos": ["images/messages/a.jpg", "images/messages/b.jpg"]
 // 新增留言：複製一段 { ... }, 貼在最後，改名字和內容就好。
 // 卡片樣式會依字數自動決定（短→對話框、中→便條、長→信封）。
 
@@ -105,7 +106,11 @@ window.MESSAGES = [
   },
   {
     "name": "彭美娟",
-    "text": "探病！安慰下午茶🫶🏼！"
+    "text": "探病！安慰下午茶🫶🏼！",
+    "photos": [
+      "images/messages/peng-meijuan-1.jpg",
+      "images/messages/peng-meijuan-2.jpg"
+    ]
   },
   {
     "name": "莊智淵",

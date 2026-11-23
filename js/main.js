@@ -303,6 +303,10 @@
   }
   var ENV_SVG = '<svg aria-hidden="true" viewBox="0 0 280 62" preserveAspectRatio="none"><path d="M0 0 L140 56 L280 0" fill="#E9D8B8" stroke="#252525" stroke-width="2.5" vector-effect="non-scaling-stroke"/></svg>';
 
+  function msgPhotos(m) {
+    return (m.photos || []).concat(m.photo ? [m.photo] : []);
+  }
+
   function msgCard(m, i) {
     var len = charLen(m.text);
     var b = el('button', 'msg reveal');
@@ -325,7 +329,7 @@
       b.appendChild(el('span', 'msg__len', '長信・約 ' + Math.round(len / 10) * 10 + ' 字'));
       b.appendChild(el('span', 'msg__more', '拆開這封 →'));
     }
-    if (m.photo) b.appendChild(el('span', 'msg__clip', '附照片'));
+    if (msgPhotos(m).length) b.appendChild(el('span', 'msg__clip', '附照片'));
     b.addEventListener('click', function () { openModal(i); });
     return b;
   }
@@ -358,15 +362,16 @@
     $('mdTo').textContent = 'To ' + (SITE.names || '');
     $('mdName').textContent = 'From ' + m.name;
     $('mdText').textContent = m.text;
-    var fig = $('mdPhoto');
-    if (m.photo) {
-      $('mdPhotoImg').src = m.photo;
-      $('mdPhotoImg').alt = m.name + ' 附上的照片';
-      fig.hidden = false;
-    } else {
-      fig.hidden = true;
-      $('mdPhotoImg').removeAttribute('src');
-    }
+    var box = $('mdPhotos');
+    box.innerHTML = '';
+    msgPhotos(m).forEach(function (src) {
+      var fig = el('figure', 'modal__photo');
+      var img = new Image();
+      img.src = src;
+      img.alt = m.name + ' 附上的照片';
+      fig.appendChild(img);
+      box.appendChild(fig);
+    });
     $('mdTextWrap').scrollTop = 0;
   }
   function openModal(i) {
