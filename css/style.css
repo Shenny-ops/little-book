@@ -525,3 +525,16 @@ body { position: relative; width: 100%; }
 @media (max-width: 719px) { .slow__photo .photo img { max-height: 70vh; } }
 .comic__panel .comic__bubble--br { top: auto; bottom: 12px; left: auto; right: 12px; }
 .comic__panel .comic__bubble--tr { top: 12px; bottom: auto; left: auto; right: 12px; }
+
+/* 背景音樂開關 */
+.music-btn {
+  position: fixed; left: 16px; bottom: 16px; z-index: 40; width: 48px; height: 48px; border-radius: 50%;
+  border: var(--line); background: var(--cream); box-shadow: 3px 3px 0 var(--ink); color: var(--ink);
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.music-btn[hidden] { display: none; }
+.music-btn svg { animation: musicBob 2.4s ease-in-out infinite; }
+.music-btn.is-off svg { animation: none; opacity: .45; }
+.music-btn__off { position: absolute; width: 30px; height: 2.5px; background: var(--red); transform: rotate(-45deg); display: none; }
+.music-btn.is-off .music-btn__off { display: block; }
+@keyframes musicBob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2px); } }

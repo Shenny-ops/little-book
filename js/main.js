@@ -65,6 +65,31 @@
     $('letterBody').textContent = (SITE.letter || '').replace('{count}', count);
   }
 
+  /* ---------- 背景音樂 ---------- */
+  var music = SITE.music || {};
+  function setMusicBtn(playing) {
+    var btn = $('musicBtn');
+    btn.classList.toggle('is-off', !playing);
+    btn.setAttribute('aria-pressed', playing ? 'true' : 'false');
+    btn.setAttribute('aria-label', playing ? '暫停背景音樂' : '播放背景音樂');
+  }
+  function startMusic() {
+    if (!music.file) return;
+    var a = $('bgm');
+    if (!a.src) a.src = music.file;
+    a.volume = music.volume != null ? music.volume : 0.5;
+    var p = a.play();
+    $('musicBtn').hidden = false;
+    setMusicBtn(true);
+    if (p && p.catch) p.catch(function () { setMusicBtn(false); });
+  }
+  function initMusic() {
+    var a = $('bgm');
+    $('musicBtn').addEventListener('click', function () {
+      if (a.paused) { startMusic(); } else { a.pause(); setMusicBtn(false); }
+    });
+  }
+
   function initCover() {
     var cover = $('cover');
     var opened = false;
@@ -83,8 +108,8 @@
       setTimeout(function () { cover.classList.add('is-rising'); }, 650);
       setTimeout(function () { cover.classList.add('is-opened'); unlock(); }, 1700);
     }
-    $('openBtn').addEventListener('click', open);
-    $('skipBtn').addEventListener('click', function () { opened = true; finish(); });
+    $('openBtn').addEventListener('click', function () { startMusic(); open(); });
+    $('skipBtn').addEventListener('click', function () { startMusic(); opened = true; finish(); });
     // 每次打開或重新整理，都從信封開始
     if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
     window.scrollTo(0, 0);
@@ -550,4 +575,5 @@
   initCover();
   initDialogs();
   initToTop();
+  initMusic();
 })();
