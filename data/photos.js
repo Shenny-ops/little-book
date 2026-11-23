@@ -65,7 +65,8 @@ window.CHAPTERS = [
       { file: "images/adventures/04.jpg", caption: "夜市", note: "" },
       { file: "images/adventures/05.jpg", caption: "", note: "" },
       { file: "images/adventures/06.jpg", caption: "", note: "" },
-      { file: "images/adventures/07.jpg", caption: "", note: "" }
+      { file: "images/adventures/07.jpg", caption: "", note: "" },
+      { file: "images/adventures/08.jpg", caption: "", note: "" }
     ]
   },
   {
