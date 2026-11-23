@@ -8,6 +8,7 @@ window.SITE = {
   names: "耀隆 & 美辰",
   namesEn: "Daniel & Rachel",
   initials: "D·R",
+  stampPhoto: "images/characters/dingding.jpg",   // 信封郵票上的照片，留空就只顯示縮寫
 
   // 封面
   openingLine: "",   // 信封上方的一句話，留空就不顯示

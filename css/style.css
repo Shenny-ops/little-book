@@ -546,3 +546,8 @@ body { position: relative; width: 100%; }
 .postcard-hero .postcard-hero__label, .postcard-hero .postcard-hero__mark { z-index: 1; }
 .polaroid .photo, .postcard .photo, .ending__photo .photo { display: block; overflow: hidden; }
 .polaroid .photo img, .postcard .photo img, .ending__photo .photo img { width: 100%; height: 100%; }
+
+/* 郵票上的丁丁 */
+.stamp__inner.has-photo { position: relative; overflow: hidden; background: var(--navy); }
+.stamp__inner.has-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+.stamp__label { position: absolute; left: 0; right: 0; bottom: 0; padding: 1px 0 2px; background: var(--navy); color: var(--yellow); text-align: center; font-size: clamp(8px, 1.6vw, 13px); line-height: 1.3; }

@@ -52,7 +52,17 @@
     $('openingLine').hidden = !SITE.openingLine;
     $('addressTo').textContent = 'To: ' + (SITE.names || '');
     $('addressTitle').textContent = SITE.title || '';
-    $('stamp').textContent = SITE.initials || '';
+    var stamp = $('stamp');
+    if (SITE.stampPhoto) {
+      var sImg = new Image();
+      sImg.src = SITE.stampPhoto;
+      sImg.alt = '';
+      stamp.appendChild(sImg);
+      stamp.appendChild(el('span', 'stamp__label', SITE.initials || ''));
+      stamp.classList.add('has-photo');
+    } else {
+      stamp.textContent = SITE.initials || '';
+    }
     $('seal').textContent = SITE.initials || '';
     var pm = SITE.postmark || {};
     var mark = $('postmark');
