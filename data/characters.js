@@ -9,7 +9,7 @@ window.CHARACTERS = [
   {
     no: "01",
     name: "耀隆",
-    en: "Yaolong",
+    en: "Daniel",
     aka: "笑臉男",
     color: "red",
     photo: "images/characters/yaolong.jpg",

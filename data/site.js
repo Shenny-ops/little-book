@@ -6,8 +6,8 @@ window.SITE = {
 
   // 兩位主角的名字（封面、信紙、結尾會用到）
   names: "耀隆 & 美辰",
-  namesEn: "Yaolong & Rachel",
-  initials: "Y·R",
+  namesEn: "Daniel & Rachel",
+  initials: "D·R",
 
   // 封面
   openingLine: "有一封信，等你們打開很久了。",

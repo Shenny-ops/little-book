@@ -35,6 +35,7 @@
     if (!p.file) btn.classList.add('is-missing');
     img.onerror = function () { btn.classList.add('is-missing'); };
     if (p.file) img.src = p.file;
+    if (p.focus) img.style.objectPosition = p.focus === 'top' ? 'center top' : p.focus;
     btn.appendChild(img);
     var index = allPhotos.length;
     allPhotos.push({ file: p.file, caption: p.caption || p.title || '', label: label });
