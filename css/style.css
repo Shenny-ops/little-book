@@ -19,7 +19,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
 body {
   margin: 0;
   font-family: var(--font-body);
@@ -501,3 +501,7 @@ a:hover { color: var(--navy); }
   .letter__hearts { right: auto; left: -46px; top: -18px; }
   .letter__cat figcaption { font-size: 18px; }
 }
+
+/* 手機上避免版面左右滑動 */
+body { position: relative; width: 100%; }
+.cover, .section, .memories, .ending { max-width: 100%; overflow-x: hidden; overflow-x: clip; }

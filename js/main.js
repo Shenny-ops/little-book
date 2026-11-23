@@ -287,6 +287,7 @@
       b.appendChild(document.createTextNode(q.text));
       b.appendChild(el('cite', '', '— ' + q.name));
       box.appendChild(b);
+      observe(b);
     });
   }
 
