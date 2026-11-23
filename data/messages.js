@@ -6,11 +6,13 @@
 window.MESSAGES = [
   {
     "name": "羅湘云",
-    "text": "你們超棒的"
+    "text": "你們超棒的",
+    "photo": "images/messages/luo-xiangyun.jpg"
   },
   {
     "name": "朱麒恩",
-    "text": "謝謝美辰在我剛來東區會眾時給我滿滿的關懷和愛心。也謝謝美辰常常在我寫作業寫到崩潰的時候傳些鼓勵的話給我，讓我充飽電繼續面對課業。"
+    "text": "謝謝美辰在我剛來東區會眾時給我滿滿的關懷和愛心。也謝謝美辰常常在我寫作業寫到崩潰的時候傳些鼓勵的話給我，讓我充飽電繼續面對課業。",
+    "photo": "images/messages/zhu-qien.jpg"
   },
   {
     "name": "關美華",

@@ -324,7 +324,6 @@
       b.appendChild(el('span', 'msg__len', '長信・約 ' + Math.round(len / 10) * 10 + ' 字'));
       b.appendChild(el('span', 'msg__more', '拆開這封 →'));
     }
-    if (m.photo) b.appendChild(el('span', 'msg__clip', '附照片'));
     b.addEventListener('click', function () { openModal(i); });
     return b;
   }
