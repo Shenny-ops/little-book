@@ -68,7 +68,6 @@
     var opened = false;
     function unlock() {
       document.body.classList.remove('locked');
-      try { sessionStorage.setItem('letterOpened', '1'); } catch (e) {}
     }
     function finish() {
       cover.classList.add('is-opening', 'is-opened');
@@ -84,9 +83,9 @@
     }
     $('openBtn').addEventListener('click', open);
     $('skipBtn').addEventListener('click', function () { opened = true; finish(); });
-    var seen = false;
-    try { seen = sessionStorage.getItem('letterOpened') === '1'; } catch (e) {}
-    if (seen) { opened = true; finish(); }
+    // 每次打開或重新整理，都從信封開始
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
   }
 
   /* ==========================================================
