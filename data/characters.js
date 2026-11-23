@@ -1,0 +1,46 @@
+// 主角介紹卡
+// color："red" 或 "blue"
+// tags：形容詞貼紙（建議 4–6 個）
+// facts：每一行是 ["標題", "內容"]
+// quote：對話框裡的一句話；quoteBy：這句是誰說的（可留空）
+// 這些內容都是從大家的表單回應裡挑出來的
+
+window.CHARACTERS = [
+  {
+    no: "01",
+    name: "耀隆",
+    en: "Yaolong",
+    aka: "笑臉男",
+    color: "red",
+    photo: "images/characters/yaolong.jpg",
+    tags: ["穩重", "溫和", "可靠", "愛妻", "情緒穩定"],
+    facts: [
+      ["特殊技能", "手藝極佳、桌遊策略平衡家"],
+      ["反差萌", "以為是 I 人的 E 人"],
+      ["隱藏屬性", "以為是老婆黏，其實是黏老婆"]
+    ],
+    quote: "我是歐耀隆！我在這裡，請派我們去！",
+    quoteBy: "郭庭豪 Peter Guo",
+    note: "冷知識：不知道怎麼辦的時候——先笑就對了。"
+  },
+  {
+    no: "02",
+    name: "美辰",
+    en: "Rachel",
+    aka: "會眾的暖暖包",
+    color: "blue",
+    photo: "images/characters/rachel.jpg",
+    tags: ["可愛", "溫暖", "體貼", "熱心", "慷慨"],
+    facts: [
+      ["特殊技能", "衣著搭配高手、美妝小物分享大使"],
+      ["隱藏身分", "正義使者（有三個人不約而同這樣寫）"],
+      ["另一個稱號", "小劇場女王"]
+    ],
+    quote: "在我難過或壓力大的時候，你總是願意聽我說說心裡的感受。",
+    quoteBy: "Monica & Michael",
+    note: "冷知識：朋友家的貓「奶茶」跟她去宜蘭，也被她愛惜到不行。"
+  }
+];
+
+// 兩張卡中間的手寫小字
+window.CHARACTERS_NOTE = "還有一隻毛很多的丁丁";
