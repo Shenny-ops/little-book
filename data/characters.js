@@ -43,4 +43,4 @@ window.CHARACTERS = [
 ];
 
 // 兩張卡中間的手寫小字
-window.CHARACTERS_NOTE = "還有一隻毛很多的丁丁";
+window.CHARACTERS_NOTE = "還有一隻可愛的丁丁";
