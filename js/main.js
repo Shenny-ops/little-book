@@ -312,6 +312,8 @@
     var b = el('button', 'msg reveal');
     b.type = 'button';
     b.setAttribute('aria-label', '閱讀 ' + m.name + ' 的完整留言');
+    if (m.style === 'envelope') len = Math.max(len, 151);
+    var realLen = charLen(m.text);
     if (len <= 36) {
       b.classList.add('msg--bubble');
       b.appendChild(el('p', 'msg__text', '「' + m.text.replace(/\s+/g, ' ') + '」'));
@@ -326,7 +328,7 @@
       b.classList.add('msg--env');
       b.insertAdjacentHTML('afterbegin', ENV_SVG);
       b.appendChild(el('span', 'msg__from', 'From ' + m.name));
-      b.appendChild(el('span', 'msg__len', '長信・約 ' + Math.round(len / 10) * 10 + ' 字'));
+      b.appendChild(el('span', 'msg__len', (realLen > 150 ? '長信・約 ' : '一封信・約 ') + Math.max(10, Math.round(realLen / 10) * 10) + ' 字'));
       b.appendChild(el('span', 'msg__more', '拆開這封 →'));
     }
     if (msgPhotos(m).length) b.appendChild(el('span', 'msg__clip', '附照片'));
