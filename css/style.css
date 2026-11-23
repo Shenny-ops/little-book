@@ -513,3 +513,4 @@ body { position: relative; width: 100%; }
 .modal__photo::before { content: ""; position: absolute; top: -10px; left: 50%; margin-left: -28px; width: 56px; height: 18px; background: rgba(244,216,75,.8); transform: rotate(4deg); }
 .msg__clip { position: absolute; right: 10px; top: -10px; padding: 2px 8px; background: var(--yellow); border: 2px solid var(--ink); font-size: 12px; font-weight: 700; transform: rotate(4deg); }
 .comic__panel--wide { grid-column: span 2; }
+.comic__panel .comic__bubble--bottom { top: auto; bottom: 12px; }

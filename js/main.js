@@ -176,7 +176,7 @@
         var panel = el('div', 'comic__panel reveal');
         panel.style.transitionDelay = (i % 4) * 80 + 'ms';
         panel.appendChild(photo(p, '照片 ' + (n0 + i)));
-        if (p.caption) panel.appendChild(el('span', 'comic__bubble', '「' + p.caption + '」'));
+        if (p.caption) panel.appendChild(el('span', 'comic__bubble' + (p.bubble === 'bottom' ? ' comic__bubble--bottom' : ''), '「' + p.caption + '」'));
         if (i === 2) panel.appendChild(el('span', 'comic__pop', '!?'));
         // 張數剛好差一張排滿時，最後一格拉寬，不留空格
         if (i === ch.photos.length - 1 && ch.photos.length % 4 === 3) panel.classList.add('comic__panel--wide');
