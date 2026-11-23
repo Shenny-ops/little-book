@@ -98,7 +98,8 @@ window.MESSAGES = [
   },
   {
     "name": "楊羅莉娜",
-    "text": "祝你們在新的地方一切順利，天天喜樂！\n很開心曾經有機會跟你們一起相處。\n 以後一定會想念你們！\n 謝謝你們一直以來的付出和熱心。"
+    "text": "祝你們在新的地方一切順利，天天喜樂！\n很開心曾經有機會跟你們一起相處。\n 以後一定會想念你們！\n 謝謝你們一直以來的付出和熱心。",
+    "photo": "images/messages/yang-luolina.jpg"
   },
   {
     "name": "Monica & Michael",
