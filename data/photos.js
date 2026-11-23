@@ -74,7 +74,8 @@ window.CHAPTERS = [
       { file: "images/adventures/10.jpg", caption: "", note: "" },
       { file: "images/adventures/11.jpg", caption: "壁球場上", note: "" },
       { file: "images/adventures/12.jpg", caption: "會眾運動", note: "" },
-      { file: "images/adventures/13.jpg", caption: "", note: "" }
+      { file: "images/adventures/13.jpg", caption: "", note: "" },
+      { file: "images/adventures/14.jpg", caption: "", note: "" }
     ]
   },
   {
