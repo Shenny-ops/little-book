@@ -48,7 +48,10 @@ window.CHAPTERS = [
       { file: "images/little-things/09.jpg", caption: "" },
       { file: "images/little-things/10.jpg", caption: "" },
       { file: "images/little-things/11.jpg", caption: "" },
-      { file: "images/little-things/12.jpg", caption: "" }
+      { file: "images/little-things/12.jpg", caption: "" },
+      { file: "images/little-things/13.jpg", caption: "" },
+      { file: "images/little-things/14.jpg", caption: "" },
+      { file: "images/little-things/15.jpg", caption: "桌遊之夜" }
     ]
   },
   {
@@ -68,7 +71,9 @@ window.CHAPTERS = [
       { file: "images/adventures/07.jpg", caption: "", note: "" },
       { file: "images/adventures/08.jpg", caption: "", note: "" },
       { file: "images/adventures/09.jpg", caption: "起飛！", note: "" },
-      { file: "images/adventures/10.jpg", caption: "", note: "" }
+      { file: "images/adventures/10.jpg", caption: "", note: "" },
+      { file: "images/adventures/11.jpg", caption: "壁球場上", note: "" },
+      { file: "images/adventures/12.jpg", caption: "會眾運動", note: "" }
     ]
   },
   {
