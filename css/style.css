@@ -538,3 +538,11 @@ body { position: relative; width: 100%; }
 .music-btn__off { position: absolute; width: 30px; height: 2.5px; background: var(--red); transform: rotate(-45deg); display: none; }
 .music-btn.is-off .music-btn__off { display: block; }
 @keyframes musicBob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2px); } }
+
+/* 有固定比例的相框：照片絕對定位填滿，避免 iOS Safari 照片載入後被撐大 */
+.char__photo, .postcard-hero, .comic__panel { position: relative; overflow: hidden; }
+.char__photo > .photo, .postcard-hero > .photo, .comic__panel > .photo { position: absolute; inset: 0; width: 100%; height: 100%; }
+.char__photo .photo img, .postcard-hero .photo img, .comic__panel .photo img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; }
+.postcard-hero .postcard-hero__label, .postcard-hero .postcard-hero__mark { z-index: 1; }
+.polaroid .photo, .postcard .photo, .ending__photo .photo { display: block; overflow: hidden; }
+.polaroid .photo img, .postcard .photo img, .ending__photo .photo img { width: 100%; height: 100%; }
